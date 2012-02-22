@@ -1,0 +1,16 @@
+<h1>Indexit</h1>
+<div id="#notice"></div>
+<form id="new_entry">
+  <input type"text" name="uri" id="new_entry_uri">
+  <input type="submit" value="Add">
+</form>
+
+<form id="searchForm">
+  <input type"text" name="literal" id="literal">
+  <input type="submit" value="Search">
+</form>
+
+<ul id="entries">
+</ul>
+
+<button id="draw">Draw</button>

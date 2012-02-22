@@ -1,0 +1,2 @@
+<a href="<%= @entry.get('uri') %>"><%= @entry.get('uri') %></a>
+<button class="detail"> Details </button>
