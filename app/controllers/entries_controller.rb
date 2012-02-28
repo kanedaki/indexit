@@ -5,7 +5,9 @@ class EntriesController < ApplicationController
     if params[:search_term].present?
       puts "Searching......"
       #Do the heavy stuff. Elastic search, mongodb....
-      entries = Entry.all
+      query = params[:search_term]
+      entries_tire = Tire.search('entries') { query { string "*#{query}*" } }
+      entries = entries_tire.results
     else
       entries = Entry.all
     end
@@ -23,7 +25,7 @@ class EntriesController < ApplicationController
   def update
     respond_with Entry.update(params[:id], params[:entry])
   end
- 
+
   def destroy
     respond_with Entry.destroy(params[:id])
   end

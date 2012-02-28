@@ -3,5 +3,3 @@ class Indexit.Models.Entry extends Backbone.Model
   validate: (attrs) ->
     if (_.isEmpty(attrs.uri))
       return 'cant be blank'
-    else
-      return 'vaya mierda'
